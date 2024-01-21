@@ -541,10 +541,10 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/loaf_lib
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/fivem-freecam
-    ref: main
-    src: https://github.com/MLGC2024/fivem-freecam
+  #- action: download_github
+    #dest: ./resources/[mlgc]/[free]/fivem-freecam
+    #ref: main
+    #src: https://github.com/MLGC2024/fivem-freecam
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/rpemotes
