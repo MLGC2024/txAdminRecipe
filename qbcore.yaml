@@ -60,6 +60,9 @@ tasks:
     ref: master
     src: https://github.com/citizenfx/screenshot-basic
 
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
   - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
@@ -85,9 +88,6 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/PolyZone
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -111,14 +111,14 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/prison_map
 
-  - action: waste_time # prevent github throttling
-    seconds: 5
-
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
     ref: main
     src: https://github.com/qbcore-framework/qb-core
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
@@ -150,9 +150,6 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/qb-houserobbery
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-prison
     ref: main
@@ -173,6 +170,9 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/qb-lapraces
 
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
   - action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
@@ -182,9 +182,6 @@ tasks:
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
     src: https://github.com/MLGC2024/qb-ambulancejob
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
@@ -279,6 +276,9 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/qb-cityhall
 
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
     ref: main
@@ -309,9 +309,6 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/qb-jewelery
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
@@ -331,6 +328,9 @@ tasks:
     dest: ./resources/[qb]/qb-fitbit
     ref: main
     src: https://github.com/qbcore-framework/qb-fitbit
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-banking
@@ -377,13 +377,13 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-input
     ref: main
     src: https://github.com/qbcore-framework/qb-input
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-loading
@@ -417,11 +417,6 @@ tasks:
     src: https://github.com/MLGC2024/d3-arcade
 
   - action: download_github
-    dest: ./resources/[mlgc]/[free]/fivem-freecam
-    ref: main
-    src: https://github.com/MLGC2024/fivem-freecam
-
-  - action: download_github
     dest: ./resources/[mlgc]/[free]/jim-mining
     ref: main
     src: https://github.com/MLGC2024/jim-mining
@@ -430,9 +425,6 @@ tasks:
     dest: ./resources/[mlgc]/[free]/jim-notepad
     ref: main
     src: https://github.com/MLGC2024/jim-notepad
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/jim-recycle
@@ -444,15 +436,8 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/keep-bags
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/lc_utils
-    ref: main
-    src: https://github.com/MLGC2024/lc_utils
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ox_lib
-    ref: main
-    src: https://github.com/MLGC2024/ox_lib
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-buffs
@@ -484,9 +469,6 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/ps-inventory
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-mdt
     ref: main
@@ -507,10 +489,8 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/ps-realtor
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ps-ui
-    ref: main
-    src: https://github.com/MLGC2024/ps-ui
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-walkingstyle
@@ -551,6 +531,51 @@ tasks:
     dest: ./resources/[mlgc]/[free]/wp-yogamats
     ref: main
     src: https://github.com/MLGC2024/wp-yogamats
+
+# Dependencies
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/ps-ui
+    ref: main
+    src: https://github.com/MLGC2024/ps-ui
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/lc_utils
+    ref: main
+    src: https://github.com/MLGC2024/lc_utils
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/ox_lib
+    ref: main
+    src: https://github.com/MLGC2024/ox_lib
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/loaf_lib
+    ref: main
+    src: https://github.com/MLGC2024/loaf_lib
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/fivem-freecam
+    ref: main
+    src: https://github.com/MLGC2024/fivem-freecam
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/rpemotes
+    ref: main
+    src: https://github.com/MLGC2024/rpemotes
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/wk_wars2x
+    ref: main
+    src: https://github.com/MLGC2024/wk_wars2x
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/map
+    ref: main
+    src: https://github.com/MLGC2024/map
+
 
   # Clean up
   - action: remove_path
