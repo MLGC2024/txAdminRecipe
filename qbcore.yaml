@@ -546,20 +546,20 @@ tasks:
     #ref: main
     #src: https://github.com/MLGC2024/fivem-freecam
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/rpemotes
-    ref: main
-    src: https://github.com/MLGC2024/rpemotes
+  #- action: download_github
+    #dest: ./resources/[mlgc]/[free]/rpemotes
+    #ref: main
+    #src: https://github.com/MLGC2024/rpemotes
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/wk_wars2x
-    ref: main
-    src: https://github.com/MLGC2024/wk_wars2x
+  #- action: download_github
+    #dest: ./resources/[mlgc]/[free]/wk_wars2x
+    #ref: main
+    #src: https://github.com/MLGC2024/wk_wars2x
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/map
-    ref: main
-    src: https://github.com/MLGC2024/map
+  #- action: download_github
+    #dest: ./resources/[mlgc]/[free]/map
+    #ref: main
+    #src: https://github.com/MLGC2024/map
 
 
   # Clean up
