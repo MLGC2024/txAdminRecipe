@@ -60,9 +60,6 @@ tasks:
     ref: master
     src: https://github.com/citizenfx/screenshot-basic
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[standalone]/progressbar
     ref: main
@@ -170,9 +167,6 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/qb-lapraces
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-garages
     ref: main
@@ -275,9 +269,6 @@ tasks:
     dest: ./resources/[qb]/qb-cityhall
     ref: main
     src: https://github.com/MLGC2024/qb-cityhall
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
@@ -382,9 +373,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-input
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-loading
     ref: main
@@ -488,9 +476,6 @@ tasks:
     dest: ./resources/[mlgc]/[free]/ps-realtor
     ref: main
     src: https://github.com/MLGC2024/ps-realtor
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-walkingstyle
