@@ -531,10 +531,10 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ox_lib
-    ref: main
-    src: https://github.com/MLGC2024/ox_lib
+  #- action: download_github
+    #dest: ./resources/[mlgc]/[free]/ox_lib
+    #ref: main
+    #src: https://github.com/MLGC2024/ox_lib
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/loaf_lib
