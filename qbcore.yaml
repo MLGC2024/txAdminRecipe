@@ -532,6 +532,11 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/map
 
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/online-interiors
+    ref: main
+    src: https://github.com/MLGC2024/online-interiors
+
 # Dependencies
   - action: download_github
     dest: ./resources/[mlgc]/[dependencies]/ps-ui
