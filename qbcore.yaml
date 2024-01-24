@@ -517,50 +517,49 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/wp-yogamats
 
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/rpemotes
+    ref: main
+    src: https://github.com/MLGC2024/rpemotes
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/wk_wars2x
+    ref: main
+    src: https://github.com/MLGC2024/wk_wars2x
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/map
+    ref: main
+    src: https://github.com/MLGC2024/map
+
 # Dependencies
   - action: download_github
-    dest: ./resources/[mlgc]/[free]/ps-ui
+    dest: ./resources/[mlgc]/[dependencies]/ps-ui
     ref: main
     src: https://github.com/MLGC2024/ps-ui
 
   - action: download_github
-    dest: ./resources/[mlgc]/[free]/lc_utils
+    dest: ./resources/[mlgc]/[dependencies]/lc_utils
     ref: main
     src: https://github.com/MLGC2024/lc_utils
 
   - action: waste_time # prevent github throttling
     seconds: 10
 
-  #- action: download_github
-    #dest: ./resources/[mlgc]/[free]/ox_lib
-    #ref: main
-    #src: https://github.com/MLGC2024/ox_lib
+  - action: download_github
+    dest: ./resources/[mlgc]/[dependencies]/ox_lib
+    ref: main
+    src: https://github.com/MLGC2024/ox_lib
 
   - action: download_github
-    dest: ./resources/[mlgc]/[free]/loaf_lib
+    dest: ./resources/[mlgc]/[dependencies]/loaf_lib
     ref: main
     src: https://github.com/MLGC2024/loaf_lib
 
-  #- action: download_github
-    #dest: ./resources/[mlgc]/[free]/fivem-freecam
-    #ref: main
-    #src: https://github.com/MLGC2024/fivem-freecam
-
-  #- action: download_github
-    #dest: ./resources/[mlgc]/[free]/rpemotes
-    #ref: main
-    #src: https://github.com/MLGC2024/rpemotes
-
-  #- action: download_github
-    #dest: ./resources/[mlgc]/[free]/wk_wars2x
-    #ref: main
-    #src: https://github.com/MLGC2024/wk_wars2x
-
-  #- action: download_github
-    #dest: ./resources/[mlgc]/[free]/map
-    #ref: main
-    #src: https://github.com/MLGC2024/map
-
+  - action: download_github
+    dest: ./resources/[mlgc]/[dependencies]/fivem-freecam
+    ref: main
+    src: https://github.com/MLGC2024/fivem-freecam
 
   # Clean up
   - action: remove_path
