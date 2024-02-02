@@ -25,18 +25,26 @@ tasks:
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
 
-  # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
     dest: ./resources/[cfx-default]
 
-  - action: download_file
-    path: ./tmp/files/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
-  - action: unzip
-    dest: ./resources/[standalone]
-    src: ./tmp/files/oxmysql.zip
+  # STANDALONE
+  - action: download_github
+    dest: ./resources/[standalone]/bob74_ipl
+    ref: master
+    src: https://github.com/MLGC2024/bob74_ipl
+
+  - action: download_github
+    dest: ./resources/[standalone]/connectqueue
+    ref: master
+    src: https://github.com/qbcore-framework/connectqueue
+
+  - action: download_github
+    dest: ./resources/[standalone]/interact-sound
+    ref: master
+    src: https://github.com/qbcore-framework/interact-sound
 
   - action: download_file
     path: ./tmp/menuv.zip
@@ -46,9 +54,26 @@ tasks:
     src: ./tmp/menuv.zip
 
   - action: download_github
-    dest: ./resources/[standalone]/bob74_ipl
+    dest: ./resources/[standalone]/mhacking
+    ref: main
+    src: https://github.com/qbcore-framework/mhacking
+
+  - action: download_file
+    path: ./tmp/files/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/oxmysql.zip
+
+  - action: download_github
+    dest: ./resources/[standalone]/PolyZone
     ref: master
-    src: https://github.com/MLGC2024/bob74_ipl
+    src: https://github.com/qbcore-framework/PolyZone
+
+  - action: download_github
+    dest: ./resources/[standalone]/progressbar
+    ref: main
+    src: https://github.com/qbcore-framework/progressbar
 
   - action: download_github
     dest: ./resources/[standalone]/safecracker
@@ -59,31 +84,6 @@ tasks:
     dest: ./resources/[standalone]/screenshot-basic
     ref: master
     src: https://github.com/citizenfx/screenshot-basic
-
-  - action: download_github
-    dest: ./resources/[standalone]/progressbar
-    ref: main
-    src: https://github.com/qbcore-framework/progressbar
-
-  - action: download_github
-    dest: ./resources/[standalone]/interact-sound
-    ref: master
-    src: https://github.com/qbcore-framework/interact-sound
-
-  - action: download_github
-    dest: ./resources/[standalone]/mhacking
-    ref: main
-    src: https://github.com/qbcore-framework/mhacking
-
-  - action: download_github
-    dest: ./resources/[standalone]/connectqueue
-    ref: master
-    src: https://github.com/qbcore-framework/connectqueue
-
-  - action: download_github
-    dest: ./resources/[standalone]/PolyZone
-    ref: master
-    src: https://github.com/qbcore-framework/PolyZone
 
     # VOICE
   - action: download_github
@@ -96,76 +96,81 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-radio
 
-    # MAPS
+    # MAPS BASE
+  - action: download_github
+    dest: ./resources/[defaultmaps]/[prison_map]
+    ref: main
+    src: https://github.com/qbcore-framework/prison_map
 
   - action: download_github
     dest: ./resources/[defaultmaps]/dealer_map
     ref: main
     src: https://github.com/qbcore-framework/dealer_map
 
+    # MAPS MLGC
   - action: download_github
-    dest: ./resources/[defaultmaps]/[prison_map]
+    dest: ./resources/[maps]/[free]/maps
     ref: main
-    src: https://github.com/qbcore-framework/prison_map
+    src: https://github.com/MLGC2024/maps
 
   # Downloading QBCore resources
   - action: download_github
+    dest: ./resources/[qb]/qb-ambulancejob
+    ref: main
+    src: https://github.com/MLGC2024/qb-ambulancejob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-banking
+    ref: main
+    src: https://github.com/MLGC2024/qb-banking
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-bankrobbery
+    ref: main
+    src: https://github.com/MLGC2024/qb-bankrobbery
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-cityhall
+    ref: main
+    src: https://github.com/MLGC2024/qb-cityhall
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-clothing
+    ref: main
+    src: https://github.com/MLGC2024/qb-clothing
+
+  - action: download_github
     dest: ./resources/[qb]/qb-core
     ref: main
-    src: https://github.com/qbcore-framework/qb-core
+    src: https://github.com/MLGC2024/qb-core
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-crafting
+    ref: main
+    src: https://github.com/MLGC2024/qb-crafting
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-crypto
+    ref: main
+    src: https://github.com/qbcore-framework/qb-crypto
 
   - action: waste_time # prevent github throttling
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
+    dest: ./resources/[qb]/qb-doorlock
     ref: main
-    src: https://github.com/MLGC2024/qb-scoreboard
+    src: https://github.com/MLGC2024/qb-doorlock
 
   - action: download_github
-    dest: ./resources/[qb]/qb-multicharacter
+    dest: ./resources/[qb]/qb-drugs
     ref: main
-    src: https://github.com/MLGC2024/qb-multicharacter
+    src: https://github.com/MLGC2024/qb-drugs
 
   - action: download_github
-    dest: ./resources/[qb]/qb-target
+    dest: ./resources/[qb]/qb-fitbit
     ref: main
-    src: https://github.com/qbcore-framework/qb-target
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-vehiclesales
-    ref: main
-    src: https://github.com/qbcore-framework/qb-vehiclesales
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-vehicleshop
-    ref: main
-    src: https://github.com/MLGC2024/qb-vehicleshop
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-houserobbery
-    ref: main
-    src: https://github.com/MLGC2024/qb-houserobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-prison
-    ref: main
-    src: https://github.com/MLGC2024/qb-prison
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-management
-    ref: main
-    src: https://github.com/MLGC2024/qb-management
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-weed
-    ref: main
-    src: https://github.com/MLGC2024/qb-weed
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-lapraces
-    ref: main
-    src: https://github.com/MLGC2024/qb-lapraces
+    src: https://github.com/qbcore-framework/qb-fitbit
 
   - action: download_github
     dest: ./resources/[qb]/qb-garages
@@ -173,24 +178,72 @@ tasks:
     src: https://github.com/MLGC2024/qb-garages
 
   - action: download_github
-    dest: ./resources/[qb]/qb-ambulancejob
+    dest: ./resources/[qb]/qb-hotdogjob
     ref: main
-    src: https://github.com/MLGC2024/qb-ambulancejob
+    src: https://github.com/qbcore-framework/qb-hotdogjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-radialmenu
+    dest: ./resources/[qb]/qb-houserobbery
     ref: main
-    src: https://github.com/MLGC2024/qb-radialmenu
+    src: https://github.com/MLGC2024/qb-houserobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-crypto
+    dest: ./resources/[qb]/qb-input
     ref: main
-    src: https://github.com/qbcore-framework/qb-crypto
+    src: https://github.com/qbcore-framework/qb-input
 
   - action: download_github
-    dest: ./resources/[qb]/qb-weathersync
+    dest: ./resources/[qb]/qb-interior
     ref: main
-    src: https://github.com/qbcore-framework/qb-weathersync
+    src: https://github.com/qbcore-framework/qb-interior
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-jewelery
+    ref: main
+    src: https://github.com/MLGC2024/qb-jewelery
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-keyminigame
+    ref: main
+    src: https://github.com/qbcore-framework/qb-keyminigame
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-lapraces
+    ref: main
+    src: https://github.com/MLGC2024/qb-lapraces
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-lockpick
+    ref: main
+    src: https://github.com/qbcore-framework/qb-lockpick
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-management
+    ref: main
+    src: https://github.com/MLGC2024/qb-management
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-multicharacter
+    ref: main
+    src: https://github.com/MLGC2024/qb-multicharacter
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-newsjob
+    ref: main
+    src: https://github.com/MLGC2024/qb-newsjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-pawnshop
+    ref: main
+    src: https://github.com/MLGC2024/qb-pawnshop
 
   - action: download_github
     dest: ./resources/[qb]/qb-policejob
@@ -198,57 +251,29 @@ tasks:
     src: https://github.com/MLGC2024/qb-policejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-traphouse
+    dest: ./resources/[qb]/qb-prison
     ref: main
-    src: https://github.com/qbcore-framework/qb-traphouse
+    src: https://github.com/MLGC2024/qb-prison
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vehiclekeys
+    dest: ./resources/[qb]/qb-radialmenu
     ref: main
-    src: https://github.com/MLGC2024/qb-vehiclekeys
+    src: https://github.com/MLGC2024/qb-radialmenu
 
   - action: download_github
-    dest: ./resources/[qb]/qb-mechanicjob
+    dest: ./resources/[qb]/qb-recyclejob
     ref: main
-    src: https://github.com/MLGC2024/qb-mechanicjob
+    src: https://github.com/qbcore-framework/qb-recyclejob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-vineyard
+    dest: ./resources/[qb]/qb-scoreboard
     ref: main
-    src: https://github.com/qbcore-framework/qb-vineyard
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-weapons
-    ref: main
-    src: https://github.com/qbcore-framework/qb-weapons
+    src: https://github.com/MLGC2024/qb-scoreboard
 
   - action: download_github
     dest: ./resources/[qb]/qb-scrapyard
     ref: main
     src: https://github.com/qbcore-framework/qb-scrapyard
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-towjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-towjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-streetraces
-    ref: main
-    src: https://github.com/qbcore-framework/qb-streetraces
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-storerobbery
-    ref: main
-    src: https://github.com/MLGC2024/qb-storerobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-spawn
-    ref: main
-    src: https://github.com/MLGC2024/qb-spawn
 
   - action: download_github
     dest: ./resources/[qb]/qb-skillbar
@@ -261,49 +286,42 @@ tasks:
     src: https://github.com/MLGC2024/qb-smallresources
 
   - action: download_github
-    dest: ./resources/[qb]/qb-recyclejob
+    dest: ./resources/[qb]/qb-spawn
     ref: main
-    src: https://github.com/qbcore-framework/qb-recyclejob
+    src: https://github.com/MLGC2024/qb-spawn
 
   - action: download_github
-    dest: ./resources/[qb]/qb-cityhall
+    dest: ./resources/[qb]/qb-storerobbery
     ref: main
-    src: https://github.com/MLGC2024/qb-cityhall
+    src: https://github.com/MLGC2024/qb-storerobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-truckrobbery
+    dest: ./resources/[qb]/qb-streetraces
     ref: main
-    src: https://github.com/qbcore-framework/qb-truckrobbery
+    src: https://github.com/qbcore-framework/qb-streetraces
 
   - action: download_github
-    dest: ./resources/[qb]/qb-pawnshop
+    dest: ./resources/[qb]/qb-target
     ref: main
-    src: https://github.com/MLGC2024/qb-pawnshop
+    src: https://github.com/qbcore-framework/qb-target
 
   - action: download_github
     dest: ./resources/[qb]/qb-taxijob
     ref: main
     src: https://github.com/MLGC2024/qb-taxijob
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-busjob
-    ref: main
-    src: https://github.com/MLGC2024/qb-busjob
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
-    dest: ./resources/[qb]/qb-newsjob
+    dest: ./resources/[qb]/qb-towjob
     ref: main
-    src: https://github.com/MLGC2024/qb-newsjob
+    src: https://github.com/qbcore-framework/qb-towjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-jewelery
+    dest: ./resources/[qb]/qb-traphouse
     ref: main
-    src: https://github.com/MLGC2024/qb-jewelery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-bankrobbery
-    ref: main
-    src: https://github.com/MLGC2024/qb-bankrobbery
+    src: https://github.com/qbcore-framework/qb-traphouse
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckerjob
@@ -311,88 +329,46 @@ tasks:
     src: https://github.com/qbcore-framework/qb-truckerjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-keyminigame
+    dest: ./resources/[qb]/qb-truckrobbery
     ref: main
-    src: https://github.com/qbcore-framework/qb-keyminigame
+    src: https://github.com/qbcore-framework/qb-truckrobbery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-fitbit
+    dest: ./resources/[qb]/qb-vehiclekeys
     ref: main
-    src: https://github.com/qbcore-framework/qb-fitbit
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
+    src: https://github.com/MLGC2024/qb-vehiclekeys
 
   - action: download_github
-    dest: ./resources/[qb]/qb-banking
+    dest: ./resources/[qb]/qb-vehiclesales
     ref: main
-    src: https://github.com/MLGC2024/qb-banking
+    src: https://github.com/qbcore-framework/qb-vehiclesales
 
   - action: download_github
-    dest: ./resources/[qb]/qb-clothing
+    dest: ./resources/[qb]/qb-vehicleshop
     ref: main
-    src: https://github.com/MLGC2024/qb-clothing
+    src: https://github.com/MLGC2024/qb-vehicleshop
 
   - action: download_github
-    dest: ./resources/[qb]/qb-hotdogjob
+    dest: ./resources/[qb]/qb-vineyard
     ref: main
-    src: https://github.com/qbcore-framework/qb-hotdogjob
+    src: https://github.com/qbcore-framework/qb-vineyard
 
   - action: download_github
-    dest: ./resources/[qb]/qb-doorlock
+    dest: ./resources/[qb]/qb-weapons
     ref: main
-    src: https://github.com/MLGC2024/qb-doorlock
+    src: https://github.com/qbcore-framework/qb-weapons
 
   - action: download_github
-    dest: ./resources/[qb]/qb-garbagejob
+    dest: ./resources/[qb]/qb-weathersync
     ref: main
-    src: https://github.com/qbcore-framework/qb-garbagejob
+    src: https://github.com/qbcore-framework/qb-weathersync
 
   - action: download_github
-    dest: ./resources/[qb]/qb-drugs
+    dest: ./resources/[qb]/qb-weed
     ref: main
-    src: https://github.com/MLGC2024/qb-drugs
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-lockpick
-    ref: main
-    src: https://github.com/qbcore-framework/qb-lockpick
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-interior
-    ref: main
-    src: https://github.com/qbcore-framework/qb-interior
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-menu
-    ref: main
-    src: https://github.com/qbcore-framework/qb-menu
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-input
-    ref: main
-    src: https://github.com/qbcore-framework/qb-input
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-loading
-    ref: main
-    src: https://github.com/qbcore-framework/qb-loading
+    src: https://github.com/MLGC2024/qb-weed
 
   # MLGC FREE
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ps-adminmenu
-    ref: main
-    src: https://github.com/MLGC2024/ps-adminmenu
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ps-inventory
-    ref: main
-    src: https://github.com/MLGC2024/ps-inventory
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/ps-hud
-    ref: main
-    src: https://github.com/MLGC2024/ps-hud
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ChairBedSystem
@@ -405,9 +381,22 @@ tasks:
     src: https://github.com/MLGC2024/d3-arcade
 
   - action: download_github
+    dest: ./resources/[mlgc]/[free]/DiamondBlackjack
+    ref: main
+    src: https://github.com/MLGC2024/DiamondBlackjack
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/dpscenes
+    ref: main
+    src: https://github.com/MLGC2024/dpscenes
+
+  - action: download_github
     dest: ./resources/[mlgc]/[free]/jim-mining
     ref: main
     src: https://github.com/MLGC2024/jim-mining
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/jim-notepad
@@ -424,8 +413,20 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/keep-bags
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/map
+    ref: main
+    src: https://github.com/MLGC2024/map
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/online-interiors
+    ref: main
+    src: https://github.com/MLGC2024/online-interiors
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/ps-adminmenu
+    ref: main
+    src: https://github.com/MLGC2024/ps-adminmenu
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-buffs
@@ -453,6 +454,11 @@ tasks:
     src: https://github.com/MLGC2024/ps-housing
 
   - action: download_github
+    dest: ./resources/[mlgc]/[free]/ps-hud
+    ref: main
+    src: https://github.com/MLGC2024/ps-hud
+    
+  - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-inventory
     ref: main
     src: https://github.com/MLGC2024/ps-inventory
@@ -466,6 +472,9 @@ tasks:
     dest: ./resources/[mlgc]/[free]/ps-multijob
     ref: main
     src: https://github.com/MLGC2024/ps-multijob
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[mlgc]/[free]/ps-objectspawner
@@ -498,6 +507,21 @@ tasks:
     src: https://github.com/MLGC2024/qb-tattooshop
 
   - action: download_github
+    dest: ./resources/[mlgc]/[free]/rpemotes
+    ref: main
+    src: https://github.com/MLGC2024/rpemotes
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/um-idcard
+    ref: main
+    src: https://github.com/MLGC2024/um-idcard
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[free]/wk_wars2x
+    ref: main
+    src: https://github.com/MLGC2024/wk_wars2x
+
+  - action: download_github
     dest: ./resources/[mlgc]/[free]/wp-placeables
     ref: main
     src: https://github.com/MLGC2024/wp-placeables
@@ -517,31 +541,12 @@ tasks:
     ref: main
     src: https://github.com/MLGC2024/wp-yogamats
 
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/rpemotes
-    ref: main
-    src: https://github.com/MLGC2024/rpemotes
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/wk_wars2x
-    ref: main
-    src: https://github.com/MLGC2024/wk_wars2x
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/map
-    ref: main
-    src: https://github.com/MLGC2024/map
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[free]/online-interiors
-    ref: main
-    src: https://github.com/MLGC2024/online-interiors
-
 # Dependencies
+
   - action: download_github
-    dest: ./resources/[mlgc]/[dependencies]/ps-ui
+    dest: ./resources/[mlgc]/[dependencies]/fivem-freecam
     ref: main
-    src: https://github.com/MLGC2024/ps-ui
+    src: https://github.com/MLGC2024/fivem-freecam
 
   - action: download_github
     dest: ./resources/[mlgc]/[dependencies]/lc_utils
@@ -550,6 +555,21 @@ tasks:
 
   - action: waste_time # prevent github throttling
     seconds: 10
+    
+  - action: download_github
+    dest: ./resources/[mlgc]/[dependencies]/loaf_lib
+    ref: main
+    src: https://github.com/MLGC2024/loaf_lib
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[dependencies]/MenuAPI
+    ref: main
+    src: https://github.com/MLGC2024/MenuAPI
+
+  - action: download_github
+    dest: ./resources/[mlgc]/[dependencies]/MugShotBase64
+    ref: main
+    src: https://github.com/MLGC2024/MugShotBase64
 
   - action: download_github
     dest: ./resources/[mlgc]/[dependencies]/ox_lib
@@ -557,14 +577,9 @@ tasks:
     src: https://github.com/MLGC2024/ox_lib
 
   - action: download_github
-    dest: ./resources/[mlgc]/[dependencies]/loaf_lib
+    dest: ./resources/[mlgc]/[dependencies]/ps-ui
     ref: main
-    src: https://github.com/MLGC2024/loaf_lib
-
-  - action: download_github
-    dest: ./resources/[mlgc]/[dependencies]/fivem-freecam
-    ref: main
-    src: https://github.com/MLGC2024/fivem-freecam
+    src: https://github.com/MLGC2024/ps-ui
 
   # Clean up
   - action: remove_path
