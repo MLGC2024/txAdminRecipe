@@ -53,11 +53,6 @@ tasks:
     dest: ./resources/[standalone]/menuv
     src: ./tmp/menuv.zip
 
-  - action: download_github
-    dest: ./resources/[standalone]/mhacking
-    ref: main
-    src: https://github.com/qbcore-framework/mhacking
-
   - action: download_file
     path: ./tmp/files/oxmysql.zip
     url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
@@ -203,19 +198,9 @@ tasks:
     src: https://github.com/MLGC2024/qb-jewelery
 
   - action: download_github
-    dest: ./resources/[qb]/qb-keyminigame
-    ref: main
-    src: https://github.com/qbcore-framework/qb-keyminigame
-
-  - action: download_github
     dest: ./resources/[qb]/qb-lapraces
     ref: main
     src: https://github.com/MLGC2024/qb-lapraces
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-lockpick
-    ref: main
-    src: https://github.com/qbcore-framework/qb-lockpick
 
   - action: download_github
     dest: ./resources/[qb]/qb-management
@@ -226,6 +211,12 @@ tasks:
     dest: ./resources/[qb]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-minigames
+    ref: main
+    src: https://github.com/qbcore-framework/qb-minigames
+
 
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
@@ -274,11 +265,6 @@ tasks:
     dest: ./resources/[qb]/qb-scrapyard
     ref: main
     src: https://github.com/qbcore-framework/qb-scrapyard
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-skillbar
-    ref: main
-    src: https://github.com/qbcore-framework/qb-skillbar
 
   - action: download_github
     dest: ./resources/[qb]/qb-smallresources
